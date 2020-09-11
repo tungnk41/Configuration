@@ -5,6 +5,8 @@ IP2="192.168.123.124"
 PORT="5555"
 
 export PATH=$PlatformTools:$PATH
+adb kill-server
+adb start-server
 adb tcpip $PORT
 adb connect $IP1:$PORT
 adb connect $IP2:$PORT
