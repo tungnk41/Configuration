@@ -6,6 +6,7 @@ then
 	PlatformTools="/home/tuhn/Android/Sdk/platform-tools"
 	export PATH=$PlatformTools:$PATH
 else
+#"C:\Users\Tuhn\AppData\Local\Android\Sdk\platform-tools"
 	PlatformTools="/C/Users/Tuhn/AppData/Local/Android/Sdk/platform-tools"
 	export PATH=$PATH:$PlatformTools
 fi
