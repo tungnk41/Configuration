@@ -5,8 +5,9 @@ if [ $os == "Linux" ]
 then
 	PlatformTools="/home/tuhn/Android/Sdk/platform-tools"
 	export PATH=$PlatformTools:$PATH
-
-	#"C:\Users\Tuhn\AppData\Local\Android\Sdk\platform-tools"
+else
+	PlatformTools="/C/Users/Tuhn/AppData/Local/Android/Sdk/platform-tools"
+	export PATH=$PATH:$PlatformTools
 fi
 
 IP1="192.168.123.123"
@@ -18,7 +19,7 @@ adb start-server
 adb tcpip $PORT
 adb connect $IP1:$PORT
 adb connect $IP2:$PORT
-clear
+#clear
 adb devices
 exit
 
