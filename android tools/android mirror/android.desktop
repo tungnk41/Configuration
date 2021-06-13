@@ -1,0 +1,18 @@
+[Desktop Entry]
+
+Version=1.0
+
+Name=Android Mirror
+
+Comment=Run Android Phone Mirror
+
+Exec=/home/tuhn/Project/Configuration/android\ tools/android\ mirror/android.sh
+
+Icon=/home/tuhn/Pictures/Android-Mirror.png
+
+Terminal=false
+
+Type=Application
+
+Categories=Utility;Application;
+
