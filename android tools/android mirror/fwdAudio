@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Forward Audio from Android
+set -e
+ADB=${ADB:-/snap/bin/scrcpy.adb}
+VLC=${VLC:-vlc}
+SNDCPY_PORT=${SNDCPY_PORT:-28200}
+serial="-s 9a634cf"
+
+"$ADB" $serial wait-for-device
+"$ADB" $serial forward tcp:$SNDCPY_PORT localabstract:sndcpy
+"$ADB" $serial shell am start com.rom1v.sndcpy/.MainActivity
+echo "Press Enter once audio capture is authorized on the device to start playing..."
+read dummy
+xdotool windowunmap $(xdotool getactivewindow)
+"$VLC" -Idummy --demux rawaud --network-caching=50 --play-and-exit tcp://localhost:"$SNDCPY_PORT"

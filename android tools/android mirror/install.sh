@@ -1,5 +1,8 @@
 #!/bin/sh
 
-chmod +x android.sh android.desktop
-yes | cp -rf android.desktop ~/.local/share/applications
+#require install vlc,xdotool
+
+chmod +x MirrorScreen MirrorScreen.desktop fwdAudio
+yes | cp -rf MirrorScreen.desktop ~/.local/share/applications
 yes | cp -rf Android-Mirror.png ~/Pictures
+yes | cp -rf fwdAudio ~/.bin

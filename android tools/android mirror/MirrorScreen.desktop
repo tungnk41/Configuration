@@ -6,7 +6,7 @@ Name=Android Mirror
 
 Comment=Run Android Phone Mirror
 
-Exec=/home/tuhn/Project/Configuration/android\ tools/android\ mirror/android.sh
+Exec=/home/tuhn/Project/Configuration/android\ tools/android\ mirror/MirrorScreen
 
 Icon=/home/tuhn/Pictures/Android-Mirror.png
 
