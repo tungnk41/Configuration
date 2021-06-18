@@ -1,0 +1,3 @@
+#!/bin/sh -e
+'/usr/local/bin/noip2'
+exit 0

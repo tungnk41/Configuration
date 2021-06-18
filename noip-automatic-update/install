@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo apt-get install build-essential 
+sudo chown root /etc/rc.local
+sudo chmod 755 /etc/rc.local
+#Copy content rc.local -> /etc/rc.local
+
+sudo cp -r noip-2.1.9 /usr/local/src
+cd /usr/local/src/noip-2.1.9
+sudo make 
+sudo make install
+
