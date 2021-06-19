@@ -1,0 +1,35 @@
+Install Linux on Android => install busybox, linux deploy app
+
+
+Pi-Hole command
+
+Install curl:
+sudo apt-get install curl
+
+To check if pihole's dns service is running:
+pihole status
+
+If pihole's dns service is not running:
+pihole restartdns 
+
+Check if lighttpd is running:
+sudo service lighttpd status
+sudo service lighttpd start
+
+Install net-tools:
+sudo apt-get install net-tools
+
+To check what is running on port 80:
+sudo netstat -tulpn | grep :80
+
+To stop the SERVICE_NAME from running on port 80 at startup:
+sudo update-rc.d -f SERVICE_NAME disable
+sudo service SERVICE_NAME stop
+
+Fix for "lost connection to api". Copy and paste these commands in the terminal:
+sudo usermod -a -G aid_net_bt_admin,aid_net_bt,aid_inet,aid_net_raw,aid_net_admin root
+sudo usermod -a -G aid_net_bt_admin,aid_net_bt,aid_inet,aid_net_raw,aid_net_admin pihole
+sudo usermod -a -G aid_net_bt_admin,aid_net_bt,aid_inet,aid_net_raw,aid_net_admin www-data
+
+If you still don't see the statistics, you can try this command and refresh your browser:
+sudo service pihole-FTL restart
