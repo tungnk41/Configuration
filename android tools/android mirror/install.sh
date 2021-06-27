@@ -6,3 +6,8 @@ chmod +x MirrorScreen MirrorScreen.desktop fwdAudio
 yes | cp -rf MirrorScreen.desktop ~/.local/share/applications
 yes | cp -rf Android-Mirror.png ~/Pictures
 yes | cp -rf fwdAudio ~/.bin
+
+# ~.profile => 
+#export ADB=$HOME/Android/Sdk/platform-tools/adb scrcpy
+#export PATH="$HOME/.bin:$PATH"
+#export PATH="$HOME/Android/Sdk/platform-tools:$PATH"

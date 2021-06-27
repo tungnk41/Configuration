@@ -2,7 +2,7 @@
 
 #Forward Audio from Android
 set -e
-ADB=${ADB:-/snap/bin/scrcpy.adb}
+ADB=${ADB:-/home/tuhn/Android/Sdk/platform-tools/adb}
 VLC=${VLC:-vlc}
 SNDCPY_PORT=${SNDCPY_PORT:-28200}
 serial="-s 9a634cf"
